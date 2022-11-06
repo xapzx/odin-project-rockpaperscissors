@@ -35,3 +35,32 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 }
+
+// Play 5 rounds then report the winner
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for(let i = 0; i < 5; i++) {
+        let computerSelection = getComputerChoice();
+        let playerSelection = prompt("Rock, Paper or Scissors?");
+        let result = playRound(playerSelection, computerSelection);
+        
+        if(result.includes("Win")) {
+            playerScore++;
+        } else if (result.includes("Lose")) {
+            computerScore++;
+        }
+
+        console.log(result);
+    }
+
+    // Declare winner
+    if(playerScore > computerScore) {
+        console.log("You Win! Score = " + playerScore + " - " + computerScore);
+    } else if (playerScore < computerScore) {
+        console.log("You Lose! Score = " + playerScore + " - " + computerScore);
+    } else {
+        console.log("You Drew!");
+    }
+}
