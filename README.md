@@ -26,9 +26,9 @@ Assignment Details:
 
     - Remember loops? This is a great opportunity to use one to play those five rounds:
 
-    for (let i = 0; i < 5; i++) {
-       // your code here!
-    }
+        for (let i = 0; i < 5; i++) {
+        // your code here!
+        }
 
     - At this point you should be using console.log() to display the results of each round and the winner at the end.
     - Use prompt() to get input from the user. Read the docs here if you need to.
