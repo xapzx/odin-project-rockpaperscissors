@@ -11,6 +11,25 @@ body {
     color: white;
 }
 
+header > nav > ul {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    list-style: none;
+    padding: 12px 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+header > nav > ul > a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    background-color: #8A307F;
+}
+
 header, footer {
     text-align: center;
 }
