@@ -51,6 +51,10 @@ header, footer {
     border: none;
 }
 
+.result {
+    text-align: center;
+}
+
 footer {
     padding: 24px 0;
 }

@@ -5,35 +5,37 @@ function getComputerChoice() {
     return choices[Math.floor(Math.random() * (3))]
 }
 
+let playerScore = 0;
+let computerScore = 0;
+const roundResult = document.querySelector(".result");
 // Play one round, return string to declare winner
 function playRound(playerSelection) {
     playerSelection = playerSelection.toLowerCase();
     let computerSelection = getComputerChoice();
-    console.log("click");
 
     if(playerSelection === "rock") {
         if(computerSelection === "rock") {
-            return "You Drew!";
+            roundResult.innerText =  "You Drew!";
         } else if(computerSelection === "paper") {
-            return "You Lose! Paper beats Rock";
+            roundResult.innerText =  "You Lose! Paper beats Rock";
         } else {
-            return "You Win! Rock beats Paper";
+            roundResult.innerText =  "You Win! Rock beats Paper";
         }
     } else if(playerSelection === "paper") {
         if(computerSelection === "rock") {
-            return "You Win! Paper beats Rock";
+            roundResult.innerText =  "You Win! Paper beats Rock";
         } else if (computerSelection === "paper") {
-            return "You Drew!";
+            roundResult.innerText =  "You Drew!";
         } else {
-            return "You Lose! Scissors beats Paper";
+            roundResult.innerText =  "You Lose! Scissors beats Paper";
         }
     } else {
         if(computerSelection === "rock") {
-            return "You Lose! Rock beats Scissors";
+            roundResult.innerText =  "You Lose! Rock beats Scissors";
         } else if(computerSelection === "paper") {
-            return "You Win! Scissors beats Paper";
+            roundResult.innerText =  "You Win! Scissors beats Paper";
         } else {
-            return "You Drew!"
+            roundResult.innerText =  "You Drew!"
         }
     }
 }
