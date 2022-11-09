@@ -51,7 +51,7 @@ header, footer {
     border: none;
 }
 
-.result {
+.result, .winner {
     text-align: center;
     font-weight: bold;
 }

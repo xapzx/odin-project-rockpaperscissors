@@ -46,6 +46,12 @@ function playRound(playerSelection) {
     }
 
     updateScore();
+
+    if(playerScore === 5) {
+        declareWinner("player");
+    } else if(computerScore === 5) {
+        declareWinner("computer");
+    }
 }
 
 // Updates the score
@@ -55,6 +61,19 @@ function updateScore() {
 
     const computer = document.querySelector(".computer-score");
     computer.innerText = "Computer: " + computerScore;
+}
+
+// Declare winner
+const content = document.querySelector(".content");
+function declareWinner(winner) {
+    const win = document.createElement('div');
+    win.className = "winner";
+    if(winner === "player") {
+        win.innerText = "Player Wins!";
+    } else {
+        win.innerText = "Computer Wins!";
+    }
+    content.appendChild(win);
 }
 
 // // Play 5 rounds then report the winner
