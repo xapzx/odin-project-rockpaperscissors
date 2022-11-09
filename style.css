@@ -53,6 +53,25 @@ header, footer {
 
 .result {
     text-align: center;
+    font-weight: bold;
+}
+
+.score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score-container > h2 {
+    padding: 24px 0;
+    margin: 0;
+}
+
+.score {
+    display: flex;
+    font-weight: bold;
+    gap: 128px;
+    padding-bottom: 24px;
 }
 
 footer {

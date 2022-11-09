@@ -18,26 +18,43 @@ function playRound(playerSelection) {
             roundResult.innerText =  "You Drew!";
         } else if(computerSelection === "paper") {
             roundResult.innerText =  "You Lose! Paper beats Rock";
+            computerScore++;
         } else {
             roundResult.innerText =  "You Win! Rock beats Paper";
+            playerScore++;
         }
     } else if(playerSelection === "paper") {
         if(computerSelection === "rock") {
             roundResult.innerText =  "You Win! Paper beats Rock";
+            playerScore++;
         } else if (computerSelection === "paper") {
             roundResult.innerText =  "You Drew!";
         } else {
             roundResult.innerText =  "You Lose! Scissors beats Paper";
+            computerScore++;
         }
     } else {
         if(computerSelection === "rock") {
             roundResult.innerText =  "You Lose! Rock beats Scissors";
+            computerScore++;
         } else if(computerSelection === "paper") {
             roundResult.innerText =  "You Win! Scissors beats Paper";
+            playerScore++;
         } else {
             roundResult.innerText =  "You Drew!"
         }
     }
+
+    updateScore();
+}
+
+// Updates the score
+function updateScore() {
+    const player = document.querySelector(".player-score");
+    player.innerText = "Player: " + playerScore;
+
+    const computer = document.querySelector(".computer-score");
+    computer.innerText = "Computer: " + computerScore;
 }
 
 // // Play 5 rounds then report the winner
