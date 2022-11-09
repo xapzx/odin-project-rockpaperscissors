@@ -34,3 +34,9 @@ Assignment Details:
     - Use prompt() to get input from the user. Read the docs here if you need to.
     - Feel free to re-work your previous functions if you need to. Specifically, you might want to change the return value to something more useful.
     - Feel free to create more “helper” functions if you think it would be useful.
+
+Disclaimer: Images/Photos belong to their rightful owners. Sources of photos/images/logos will be listed below.
+
+- Image of Rock: https://icons8.com/icon/9FSQ5judlnAN/rock
+- Image of Paper/File: https://icons8.com/icon/81258/file
+- Image of Scissors: https://icons8.com/icon/14875/surgical-scissors

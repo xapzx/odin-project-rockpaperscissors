@@ -6,8 +6,10 @@ function getComputerChoice() {
 }
 
 // Play one round, return string to declare winner
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection) {
     playerSelection = playerSelection.toLowerCase();
+    let computerSelection = getComputerChoice();
+    console.log("click");
 
     if(playerSelection === "rock") {
         if(computerSelection === "rock") {
@@ -36,31 +38,40 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// Play 5 rounds then report the winner
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
+// // Play 5 rounds then report the winner
+// function game() {
+//     let playerScore = 0;
+//     let computerScore = 0;
 
-    for(let i = 0; i < 5; i++) {
-        let computerSelection = getComputerChoice();
-        let playerSelection = prompt("Rock, Paper or Scissors?");
-        let result = playRound(playerSelection, computerSelection);
+//     for(let i = 0; i < 5; i++) {
+//         let computerSelection = getComputerChoice();
+//         let playerSelection = prompt("Rock, Paper or Scissors?");
+//         let result = playRound(playerSelection, computerSelection);
         
-        if(result.includes("Win")) {
-            playerScore++;
-        } else if (result.includes("Lose")) {
-            computerScore++;
-        }
+//         if(result.includes("Win")) {
+//             playerScore++;
+//         } else if (result.includes("Lose")) {
+//             computerScore++;
+//         }
 
-        console.log(result);
-    }
+//         console.log(result);
+//     }
 
-    // Declare winner
-    if(playerScore > computerScore) {
-        console.log("You Win! Score = " + playerScore + " - " + computerScore);
-    } else if (playerScore < computerScore) {
-        console.log("You Lose! Score = " + playerScore + " - " + computerScore);
-    } else {
-        console.log("You Drew!");
-    }
-}
+//     // Declare winner
+//     if(playerScore > computerScore) {
+//         console.log("You Win! Score = " + playerScore + " - " + computerScore);
+//     } else if (playerScore < computerScore) {
+//         console.log("You Lose! Score = " + playerScore + " - " + computerScore);
+//     } else {
+//         console.log("You Drew!");
+//     }
+// }
+
+const rock = document.querySelector(".rock");
+rock.addEventListener('click', () => playRound("rock"));
+
+const paper = document.querySelector(".paper");
+paper.addEventListener('click', () => playRound("paper"));
+
+const scissors = document.querySelector(".scissors");
+scissors.addEventListener('click', () => playRound("scissors"));

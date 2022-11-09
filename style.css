@@ -21,7 +21,7 @@ header > nav > ul {
     font-weight: bold;
 }
 
-header > nav > ul > a {
+ul > a {
     text-decoration: none;
     color: white;
 }
@@ -35,8 +35,20 @@ header, footer {
 }
 
 .content {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     flex: 1;
     background-color: #79A7D3;
+}
+
+.choices {
+    text-align: center;
+}
+
+.choices > button {
+    background-color: #79A7D3;
+    border: none;
 }
 
 footer {
