@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: verdana, georgia, arial;
+    background-color: #6883BC;
+    color: white;
+}
+
+header, footer {
+    text-align: center;
+}
+
+.content {
+    flex: 1;
+    background-color: #79A7D3;
+}
+
+footer {
+    padding: 24px 0;
+}
