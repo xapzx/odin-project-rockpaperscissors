@@ -1,6 +1,8 @@
 # odinsproject-rockpaperscissors
 Project: Simple implementation of the classic “rock paper scissors” game.
 
+Live Preview: https://xapzx.github.io/odin-project-rockpaperscissors/
+
 This project is apart of The Odin Project Foundations Course. The aim of this project is to implement a simple version of the "rock paper scissors" game. The first iteration of this project will be to implement it to be played from the browser console, then to develop a second iteration which will include a graphical user interface.
 
 Assignment Details:
